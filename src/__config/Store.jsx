@@ -9,7 +9,6 @@ import reducers from '../_reducers'
 
 const config={key:'root', storage}
 const reducer = persistCombineReducers(config, reducers)
-const store = createStore(reducer)
 
 const Store = compose(
   applyMiddleware(promise, logger),

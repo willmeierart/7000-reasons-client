@@ -4,7 +4,7 @@ import MainDataReducer from './reducer_main_data'
 // import persist from './persist'
 
 const rootReducer = combineReducers({
-  WPdata:MainDataReducer,
+  GRAPH:MainDataReducer,
   // FnState:FunctionalReducer
   // persist:persist
 })

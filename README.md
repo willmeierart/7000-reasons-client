@@ -1,3 +1,3 @@
-#  i7000 Reasons
+# 7000 Reasons
 
-##  experimental art platform/project as website for Jonathan Saiz and Wes Magyar
+## experimental art platform/project as website for Jonathan Saiz and Wes Magyar

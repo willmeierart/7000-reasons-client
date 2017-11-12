@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import '../styles/main.css'
 
-import {fetchWPpages, fetchWPposts} from '../_actions'
+import {fetchGraph} from '../_actions'
 
 import AppRouter from '../components/Architecture/AppRouter'
 
 class App extends Component {
-  constructor(props){
-    super(props)
+  // constructor(props){
+  //   super(props)
     // const {WPdata} = this.props.data
     // const freshy = []
     // async function fresh(){
@@ -23,7 +23,7 @@ class App extends Component {
     //     fetchBoth()
     //   }
     // })
-  }
+  // }
 
   // componentDidMount(){
   //   const fetchBoth=(()=>{
@@ -44,8 +44,7 @@ class App extends Component {
 
 const mapStateToProps=(state)=>{return {data:state}}
 const mapDispatchToProps=(dispatch)=>{return{
-  onFetchWPpages:()=>{dispatch(fetchWPpages())},
-  onFetchWPposts:()=>{dispatch(fetchWPposts())}
+  onFetchGraph:(reqObj)=>{dispatch(fetchGraph(reqObj))}
 }}
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)

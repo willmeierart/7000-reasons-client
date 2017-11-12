@@ -1,24 +1,13 @@
 import axios from 'axios'
 
-export const FETCH_WP_PAGES = 'fetch_wp_pages'
-export const FETCH_WP_POSTS = 'fetch_wp_posts'
+export const FETCH_GRAPH = 'fetch_graph'
 
-const BASE_URL = '/'
+const BASE_ENDPOINT = 'https://api.graphcms.com/simple/v1/7000Reasons'
 
-const PAGES_URL = `${BASE_URL}/wp-json/wp/v2/pages`
-const POSTS_URL = `${BASE_URL}/wp-json/wp/v2/posts`
-
-export function fetchWPpages(){
-  const request = axios.get(PAGES_URL).then(res=>res)
+export function fetchGraph(reqObj){
+  const request = axios.get(BASE_ENDPOINT).then(res=>res)
   return {
-    type: FETCH_WP_PAGES,
-    payload: request
-  }
-}
-export function fetchWPposts(){
-  const request = axios.get(POSTS_URL).then(res=>res)
-  return {
-    type: FETCH_WP_POSTS,
+    type: FETCH_GRAPH,
     payload: request
   }
 }
